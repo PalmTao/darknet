@@ -10,4 +10,5 @@ RUN sed -i s/GPU=0/GPU=1/g Makefile
 RUN sed -i s/CUDNN=0/CUDNN=1/g Makefile
 RUN sed -i s/CUDNN_HALF=0/CUDNN_HALF=1/g Makefile
 RUN sed -i s/OPENMP=0/OPENMP=1/g Makefile
+RUN sed -i s/#ARCH= -gencode arch=compute_70,code=[sm_70,compute_70]/ARCH= -gencode arch=compute_70,code=[sm_70,compute_70]/g Makefile
 RUN make
